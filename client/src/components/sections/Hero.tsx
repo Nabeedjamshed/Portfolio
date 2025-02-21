@@ -69,8 +69,8 @@ export default function Hero() {
             transition={{ duration: 0.5, ease: "easeOut" }}
           ></motion.div>
           <motion.img 
-            src="/n.jpg" 
-            alt="Nabeed Jamshed"
+            src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1288&q=80" 
+            alt="Professional Developer"
             className="absolute inset-0 w-full h-full object-cover rounded-lg transform -rotate-6"
             whileHover={{ rotate: 0, scale: 1.05 }}
             transition={{ duration: 0.3 }}
