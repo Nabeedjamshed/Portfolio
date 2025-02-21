@@ -16,19 +16,23 @@ export default function Hero() {
         <motion.h1 
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
           className="text-5xl sm:text-7xl font-bold font-['Space_Grotesk']"
         >
           Hi, I'm{" "}
-          <span className="text-[#64FFDA]">
+          <motion.span 
+            className="text-[#64FFDA]"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             Nabeed Jamshed
-          </span>
+          </motion.span>
         </motion.h1>
 
         <motion.p
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.5, delay: 0.1, type: "spring" }}
           className="text-xl sm:text-2xl text-[#8892B0] max-w-2xl font-['Inter']"
         >
           A passionate AI and Machine Learning enthusiast dedicated to building intelligent systems that solve real-world problems. 
@@ -39,6 +43,7 @@ export default function Hero() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          whileHover={{ scale: 1.05 }}
         >
           <Button 
             onClick={scrollToProjects}
@@ -52,17 +57,23 @@ export default function Hero() {
       </div>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        initial={{ opacity: 0, scale: 0.9, x: 50 }}
+        animate={{ opacity: 1, scale: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.3, type: "spring", bounce: 0.4 }}
         className="hidden lg:block relative"
       >
         <div className="relative w-80 h-80">
-          <div className="absolute inset-0 border-2 border-[#64FFDA] rounded-lg transform rotate-6"></div>
-          <img 
+          <motion.div 
+            className="absolute inset-0 border-2 border-[#64FFDA] rounded-lg"
+            animate={{ rotate: [0, 6] }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          ></motion.div>
+          <motion.img 
             src="/n.jpg" 
             alt="Nabeed Jamshed"
-            className="absolute inset-0 w-full h-full object-cover rounded-lg transform -rotate-6 transition-transform duration-300 hover:rotate-0"
+            className="absolute inset-0 w-full h-full object-cover rounded-lg transform -rotate-6"
+            whileHover={{ rotate: 0, scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           />
         </div>
       </motion.div>
