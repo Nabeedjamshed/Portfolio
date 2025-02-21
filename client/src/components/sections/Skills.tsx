@@ -3,18 +3,19 @@ import SectionHeading from "@/components/SectionHeading";
 import { Card } from "@/components/ui/card";
 
 const skills = [
-  { name: "Flutter", level: 90 },
-  { name: "Firebase", level: 85 },
-  { name: "Python", level: 80 },
-  { name: "C++", level: 75 },
-  { name: "MySQL", level: 85 }
+  { name: "Machine Learning", level: 90 },
+  { name: "Deep Learning", level: 85 },
+  { name: "Computer Vision", level: 85 },
+  { name: "Python", level: 90 },
+  { name: "TensorFlow/PyTorch", level: 80 },
+  { name: "Natural Language Processing", level: 75 }
 ];
 
 export default function Skills() {
   return (
     <section className="py-20">
       <SectionHeading>Technical Skills</SectionHeading>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
         {skills.map((skill, index) => (
           <motion.div
