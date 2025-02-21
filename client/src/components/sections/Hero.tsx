@@ -3,8 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 
 export default function Hero() {
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="min-h-screen flex items-center justify-between">
+    <section id="about" className="min-h-screen flex items-center justify-between pt-16">
       <div className="space-y-6 max-w-2xl">
         <motion.h1 
           initial={{ y: 20, opacity: 0 }}
@@ -34,6 +38,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Button 
+            onClick={scrollToProjects}
             className="bg-transparent border-2 border-[#64FFDA] text-[#64FFDA] hover:bg-[#64FFDA]/10"
             size="lg"
           >
@@ -47,12 +52,12 @@ export default function Hero() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="hidden lg:block"
+        className="hidden lg:block relative"
       >
         <div className="relative w-80 h-80">
           <div className="absolute inset-0 border-2 border-[#64FFDA] rounded-lg transform rotate-6"></div>
           <img 
-            src="attached_assets/nabeed Ali.jpg"
+            src="../../attached_assets/nabeed Ali.jpg"
             alt="Nabeed Jamshed"
             className="absolute inset-0 w-full h-full object-cover rounded-lg transform -rotate-6 transition-transform duration-300 hover:rotate-0"
           />

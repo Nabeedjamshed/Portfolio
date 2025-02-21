@@ -5,36 +5,42 @@ import { Trophy } from "lucide-react";
 
 const achievements = [
   {
-    year: 2023,
+    year: 2025,
     title: "Co-founded Programmunity",
     description: "Created a thriving programming community platform"
   },
   {
-    year: 2022,
-    title: "National Coding Competition Winner",
-    description: "First place in algorithmic problem solving"
+    year: 2024,
+    title: "4th Position in TechFest NED",
+    description: "Coding Competition achievement at NED University"
   },
   {
-    year: 2021,
-    title: "Google Flutter Certification",
-    description: "Advanced mobile development certification"
+    year: 2024,
+    title: "3rd Position in Supercom",
+    description: "Coding Competition at Bahria University"
+  },
+  {
+    year: 2024,
+    title: "5th Position in ProBattle",
+    description: "Machine Learning Competition at IBA University"
   }
 ];
 
 export default function Achievements() {
   return (
-    <section className="py-20">
+    <section id="achievements" className="py-20">
       <SectionHeading>Achievements</SectionHeading>
-      
+
       <div className="space-y-6 mt-10">
         {achievements.map((achievement, index) => (
           <motion.div
             key={achievement.title}
             initial={{ x: -20, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
           >
-            <Card className="p-6 bg-[#112240] border-[#233554]">
+            <Card className="p-6 bg-[#112240] border-[#233554] hover:scale-[1.02] transition-transform">
               <div className="flex items-start gap-4">
                 <Trophy className="h-6 w-6 text-[#64FFDA] flex-shrink-0" />
                 <div>
