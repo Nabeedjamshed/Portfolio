@@ -69,7 +69,7 @@ export default function Hero() {
             transition={{ duration: 0.5, ease: "easeOut" }}
           ></motion.div>
           <motion.img 
-            src="https://cdn.dribbble.com/users/1292677/screenshots/6139167/avento.gif" 
+            src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80" 
             alt="Laptop Setup"
             className="absolute inset-0 w-full h-full object-cover rounded-lg transform -rotate-6"
             whileHover={{ rotate: 0, scale: 1.05 }}
