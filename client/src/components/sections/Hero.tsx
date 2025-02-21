@@ -24,8 +24,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-xl sm:text-2xl text-[#8892B0] max-w-2xl font-['Inter']"
         >
-          A frontend developer passionate about creating intuitive and engaging user experiences. 
-          Specializing in Flutter, Firebase, and modern web technologies.
+          A passionate AI and Machine Learning enthusiast dedicated to building intelligent systems that solve real-world problems. 
+          Specializing in deep learning, computer vision, and predictive analytics.
         </motion.p>
 
         <motion.div
