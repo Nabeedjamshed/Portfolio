@@ -4,7 +4,10 @@ import { ChevronRight } from "lucide-react";
 
 export default function Hero() {
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -57,7 +60,7 @@ export default function Hero() {
         <div className="relative w-80 h-80">
           <div className="absolute inset-0 border-2 border-[#64FFDA] rounded-lg transform rotate-6"></div>
           <img 
-            src="../../attached_assets/nabeed Ali.jpg"
+            src="/n.jpg" 
             alt="Nabeed Jamshed"
             className="absolute inset-0 w-full h-full object-cover rounded-lg transform -rotate-6 transition-transform duration-300 hover:rotate-0"
           />
